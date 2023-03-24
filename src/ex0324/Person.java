@@ -3,7 +3,7 @@ package ex0324;
 /*
  * abstract class는 생성 불가, 상속만 가능.
  * */
-public abstract class Person /* extends Object */ {
+public abstract class Person implements Comparable<Person> /* extends Object */ {
 	// Information Hiding(정보 은닉) : 외부에서 사용자 마음대로 조회/변경하는 것을 막는다.
 	private String name;
 	private int age;
@@ -87,4 +87,9 @@ public abstract class Person /* extends Object */ {
 	// abstract method declaration - 선언문만 있고 body(기능)은 없다.
 	// abstract method를 가지고 있는 class는 반드시 abstract라고 선언되어야 한다.
 	public abstract void sleep();
+	
+	@Override
+	public int compareTo(Person p) {
+		return this.age - p.age;
+	}
 }
