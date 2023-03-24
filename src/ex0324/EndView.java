@@ -16,4 +16,18 @@ public class EndView {
 			System.out.println(p); // p.toString()이 호출된다.
 		}
 	}
+	
+	/**
+	 * 이름에 해당하는 정보 출력하기
+	 * */
+	public static void printPerson(Person person) {
+		System.out.println(person);
+	}
+	
+	/**
+	 * 성공 또는 실패 메시지 출력하기
+	 * */
+	public static void printMessage(String message) {
+		System.out.println(message);
+	}
 }

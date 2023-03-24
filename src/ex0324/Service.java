@@ -15,8 +15,8 @@ public class Service  {
 		list.add(new SpiderMan("Haejun", 31, true));
 		list.add(new SpiderMan("Joon", 42, false));
 		list.add(new SpiderMan("Minho", 24, true));
-		list.add(new Student("Kim", 14, 100));
-		list.add(new Student("Park", 60, 500));
+		list.add(new Student("Kim", 30, 100));
+		list.add(new Student("Kim", 14, 500));
 		list.add(new Student("Choi", 37, 300));
 	}
 	
@@ -33,7 +33,7 @@ public class Service  {
 	 * */
 	public void insert(Person person) {
 		// DB에서의 등록은 보통 int type을 return한다. e.g. 2행이 추가되었습니다.
-		
+		list.add(person);
 	}
 	
 	/**
