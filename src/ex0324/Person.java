@@ -1,6 +1,9 @@
 package ex0324;
 
-public class Person /* extends Object */ {
+/*
+ * abstract class는 생성 불가, 상속만 가능.
+ * */
+public abstract class Person /* extends Object */ {
 	// Information Hiding(정보 은닉) : 외부에서 사용자 마음대로 조회/변경하는 것을 막는다.
 	private String name;
 	private int age;
@@ -57,6 +60,11 @@ public class Person /* extends Object */ {
 	public void setAge(int age) {
 		this.age = age;
 	}
+
+	@Override
+	public String toString() {
+		return getName()+ " | " + getAge();
+	}
 	
 	/*
 	 * Overriding : 부모에 정의된 메소드를 자식 클래스에서 새롭게 재정의
@@ -67,4 +75,16 @@ public class Person /* extends Object */ {
 	 * return type, method name, parameter는 모두 같다.
 	 * 단, 기능은 다르게 작성한다.
 	 * */
+	
+	public void eat() {
+		System.out.println("Person의 eat() 호출...");
+	}
+	
+	public void walk() {
+		System.out.println("Person의 walk() 호출...");
+	}
+	
+	// abstract method declaration - 선언문만 있고 body(기능)은 없다.
+	// abstract method를 가지고 있는 class는 반드시 abstract라고 선언되어야 한다.
+	public abstract void sleep();
 }

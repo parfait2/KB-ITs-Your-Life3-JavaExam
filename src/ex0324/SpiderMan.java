@@ -47,7 +47,32 @@ public class SpiderMan extends Person { // 'SpiderMan is a Person' relationship 
 		this.spider = spider;
 	}
 	
+	// 부모의 메소드 재정의
+	@Override
+	public String toString() {
+		return super.toString() + " | " + spider;
+	}
 	
+	// 자식만이 갖는 메소드
+	public void jump() {
+		System.out.println("SpiderMan만 가지고 있는 jump() call...");
+	}
 	
+	@Override
+	public void walk() {
+		// 부모 쪽에 있는 walk()를 호출하고 싶다.
+		super.walk();
+		System.out.println("SpiderMan의 walk() call...");
+		
+		/*
+		 * [Console]
+		 * Person의 walk() 호출...
+		 * SpiderMan의 walk() call...
+		 * */
+	}
 	
+	@Override
+	public void sleep() {
+		System.out.println("SpiderMan sleep call...");
+	}
 }
