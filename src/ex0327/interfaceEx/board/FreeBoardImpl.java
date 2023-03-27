@@ -3,11 +3,7 @@ package ex0327.interfaceEx.board;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FreeBoardServiceImpl implements BoardService {
-
-	public FreeBoardServiceImpl() {
-		// TODO Auto-generated constructor stub
-	}
+public class FreeBoardImpl implements BoardService {
 
 	@Override
 	public int insert(Board board) {
@@ -36,5 +32,10 @@ public class FreeBoardServiceImpl implements BoardService {
 
 		System.out.println("FreeBoardServiceImpl의 selectAll call...");
 		return null;
+	}
+	
+	public int replyInsert() {
+		System.out.println("FreeBoardImpl의 replyInsert call...");
+		return 3;
 	}
 }

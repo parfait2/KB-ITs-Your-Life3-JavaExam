@@ -3,11 +3,7 @@ package ex0327.interfaceEx.board;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UploadBoardServiceImpl implements BoardService {
-
-	public UploadBoardServiceImpl() {
-		// TODO Auto-generated constructor stub
-	}
+public class UploadBoardImpl implements BoardService {
 
 	@Override
 	public int insert(Board board) {

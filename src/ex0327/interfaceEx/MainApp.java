@@ -1,9 +1,13 @@
 package ex0327.interfaceEx;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainApp {
 
 	public static void main(String[] args) {
 		// Tv 2대 , Audio 2대 저장하고 그 정보를 출력한다.
+		/*
 		ElecFunction elec[] = new ElecFunction[5];
 
 		elec[0] = new Tv("A01", 500000, 12);
@@ -15,8 +19,22 @@ public class MainApp {
 
 		for (ElecFunction e : elec) {
 			 e.start();
-			//System.out.println(e);
+			System.out.println(e);
 		}
+		*/
+		
+		/// 위의 코드를 List로 변경 ///
+		ElecFunction elec[] = new ElecFunction[5];
 
+		List<Elec> list = new ArrayList<>();
+		list.add(new Tv("A01", 500000, 12));
+		list.add(new Tv("A02", 2500, 20));
+		list.add(new Tv("A03", 3000, 30));
+		list.add(new Audio("A04", 8500, 200));
+		list.add(new Audio("A05", 700, 100));
+		
+		for (Elec e : list) {
+			System.out.println(e);
+		}
 	}
 }

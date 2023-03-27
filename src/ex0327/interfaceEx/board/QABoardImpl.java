@@ -6,11 +6,7 @@ import java.util.List;
 /**
  * QA에 관련된 Business Logic(주요 기능)
  * */
-public class QABoardServiceImpl implements BoardService {
-
-	public QABoardServiceImpl() {
-		// TODO Auto-generated constructor stub
-	}
+public class QABoardImpl implements BoardService {
 	
 	@Override
 	public int insert(Board board) {
