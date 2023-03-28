@@ -1,8 +1,8 @@
 package ex0327.interfaceEx;
 
 public class Elec {
-	String code;
-	int cost;
+	String code; // private이어야 한다.
+	int cost; // private이어야 한다.
 	
 	public Elec() {}
 	

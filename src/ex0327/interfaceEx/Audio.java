@@ -1,7 +1,7 @@
 package ex0327.interfaceEx;
 
 public class Audio extends Elec implements ElecFunction {
-	int volume;
+	int volume; // private이어야 한다.
 
 	public Audio() {}
 
